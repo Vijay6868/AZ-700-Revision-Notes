@@ -43,3 +43,13 @@ Azure provides two primary high availability configurations to minimize connecti
 * **How it works:** Both instances of the virtual network gateway are deployed in an active state simultaneously. Both instances establish independent, unique VPN tunnels to your physical on-premises VPN device.
 * **Traffic Flow:** Traffic leaving your Azure VNet is load-balanced and routed through both tunnels at the same time. 
 * **Resiliency:** If one instance or tunnel suffers an outage, Azure automatically and instantly routes all traffic through the remaining active tunnel, providing seamless failover without user impact.
+
+### 5. Check Your Knowledge (Exam Prep)
+
+#### Question 1: What are the two types of VPNs?
+* **Correct Answer:** Policy-based and Route-based.
+* **Key Concept:** Azure VPN gateways must explicitly be designated as either route-based (dynamic routing) or policy-based (static routing) during creation, defining how the underlying IPsec engine matches and encrypts network traffic.
+
+#### Question 2: What is the default high availability configuration for VPN gateways?
+* **Correct Answer:** Active-standby
+* **Key Concept:** Every Azure VPN gateway is provisioned by default with two instances in an active-standby deployment pattern. Upgrading to active-active requires explicit manual configuration.
